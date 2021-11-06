@@ -1,0 +1,4 @@
+service:
+  rates:
+    API_KEY: 386a3dd0e3505ecb24a9225dfb95ae8b
+    endpoint: https://api.exchangeratesapi.io/v1/latest?access_key=${service.rates.API_KEY}
