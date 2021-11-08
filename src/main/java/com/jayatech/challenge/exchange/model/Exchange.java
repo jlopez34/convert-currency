@@ -1,27 +1,41 @@
-package com.jayatech.challenge.exchange.dto;
+package com.jayatech.challenge.exchange.model;
 
 import com.opengamma.strata.collect.ArgChecker;
 import org.springframework.beans.BeanUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class ExchangeDto implements Serializable {
+@Entity
+public class Exchange implements Serializable {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
+    @Column
     private String userId;
 
+    @Column
     private String currencyFrom;
 
+    @Column
     private float valueFrom;
 
+    @Column
     private String currencyTo;
 
+    @Column
     private float valueTo;
 
+    @Column
     private float rate;
 
+    @Column
     private LocalDateTime dateTime;
 
     public Long getId() {
@@ -88,15 +102,15 @@ public class ExchangeDto implements Serializable {
         this.dateTime = dateTime;
     }
 
-    public ExchangeDto toEntity() {
-        ExchangeDto store = new ExchangeDto();
+    public Exchange toEntity() {
+        Exchange store = new Exchange();
         BeanUtils.copyProperties(this, store);
         return store;
     }
 
-    public static ExchangeDto of(ExchangeDto exchange) {
+    public static Exchange of(Exchange exchange) {
         ArgChecker.notNull(exchange, "exchange");
-        ExchangeDto dto = new ExchangeDto();
+        Exchange dto = new Exchange();
         BeanUtils.copyProperties(exchange, dto);
         return dto;
     }

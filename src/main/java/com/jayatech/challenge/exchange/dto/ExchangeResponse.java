@@ -1,4 +1,4 @@
-package com.jayatech.challenge.exchange.model;
+package com.jayatech.challenge.exchange.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
@@ -14,7 +14,7 @@ public class ExchangeResponse {
   private String userID = null;
 
   @SerializedName("currency")
-  private CurrencyResponse currency = null;
+  private Currency currency = null;
 
   @SerializedName("transaction")
   private Transaccion transaction = null;
@@ -37,7 +37,7 @@ public class ExchangeResponse {
     this.userID = userID;
   }
 
-  public ExchangeResponse currency(CurrencyResponse currency) {
+  public ExchangeResponse currency(Currency currency) {
     this.currency = currency;
     return this;
   }
@@ -47,11 +47,11 @@ public class ExchangeResponse {
    * @return currency
   **/
   @ApiModelProperty(value = "")
-  public CurrencyResponse getCurrency() {
+  public Currency getCurrency() {
     return currency;
   }
 
-  public void setCurrency(CurrencyResponse currency) {
+  public void setCurrency(Currency currency) {
     this.currency = currency;
   }
 

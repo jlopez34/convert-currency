@@ -1,4 +1,4 @@
-package com.jayatech.challenge.exchange.model;
+package com.jayatech.challenge.exchange.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,12 +11,12 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-11-05T14:36:41.498Z")
 public class ExchangeRequest {
   @SerializedName("change")
-  private CurrencyRequest change = null;
+  private Currency change = null;
 
   @SerializedName("userID")
   private String userID = null;
 
-  public ExchangeRequest change(CurrencyRequest change) {
+  public ExchangeRequest change(Currency change) {
     this.change = change;
     return this;
   }
@@ -26,11 +26,11 @@ public class ExchangeRequest {
    * @return change
   **/
   @ApiModelProperty(value = "")
-  public CurrencyRequest getChange() {
+  public Currency getChange() {
     return change;
   }
 
-  public void setChange(CurrencyRequest change) {
+  public void setChange(Currency change) {
     this.change = change;
   }
 

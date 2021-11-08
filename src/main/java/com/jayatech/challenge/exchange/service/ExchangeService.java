@@ -1,11 +1,11 @@
 package com.jayatech.challenge.exchange.service;
 
-import com.jayatech.challenge.exchange.model.ExchangeRequest;
-import com.jayatech.challenge.exchange.model.ExchangeResponse;
+import com.jayatech.challenge.exchange.dto.ExchangeRequest;
+import com.jayatech.challenge.exchange.dto.ExchangeResponse;
 
 import java.util.List;
 
 public interface ExchangeService {
     ExchangeResponse makeConversion(ExchangeRequest exchangeRequest);
-    List<ExchangeResponse> obtainTransaction(String userId);
+    List<ExchangeResponse> findTransactionByUserId(String userId);
 }

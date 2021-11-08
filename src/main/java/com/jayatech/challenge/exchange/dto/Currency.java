@@ -1,4 +1,4 @@
-package com.jayatech.challenge.exchange.model;
+package com.jayatech.challenge.exchange.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
@@ -6,10 +6,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * CurrencyRequest
+ * CurrencyResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-11-05T14:36:41.498Z")
-public class CurrencyRequest {
+public class Currency {
   @SerializedName("from")
   private String from = null;
 
@@ -19,7 +19,10 @@ public class CurrencyRequest {
   @SerializedName("to")
   private String to = null;
 
-  public CurrencyRequest from(String from) {
+  @SerializedName("change")
+  private Float change = null;
+
+  public Currency from(String from) {
     this.from = from;
     return this;
   }
@@ -37,7 +40,7 @@ public class CurrencyRequest {
     this.from = from;
   }
 
-  public CurrencyRequest value(Float value) {
+  public Currency value(Float value) {
     this.value = value;
     return this;
   }
@@ -55,7 +58,7 @@ public class CurrencyRequest {
     this.value = value;
   }
 
-  public CurrencyRequest to(String to) {
+  public Currency to(String to) {
     this.to = to;
     return this;
   }
@@ -73,6 +76,24 @@ public class CurrencyRequest {
     this.to = to;
   }
 
+  public Currency change(Float change) {
+    this.change = change;
+    return this;
+  }
+
+   /**
+   * Get change
+   * @return change
+  **/
+  @ApiModelProperty(example = "100.0", value = "")
+  public Float getChange() {
+    return change;
+  }
+
+  public void setChange(Float change) {
+    this.change = change;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -82,26 +103,28 @@ public class CurrencyRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CurrencyRequest currencyRequest = (CurrencyRequest) o;
-    return Objects.equals(this.from, currencyRequest.from) &&
-        Objects.equals(this.value, currencyRequest.value) &&
-        Objects.equals(this.to, currencyRequest.to);
+    Currency currency = (Currency) o;
+    return Objects.equals(this.from, currency.from) &&
+        Objects.equals(this.value, currency.value) &&
+        Objects.equals(this.to, currency.to) &&
+        Objects.equals(this.change, currency.change);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(from, value, to);
+    return Objects.hash(from, value, to, change);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CurrencyRequest {\n");
+    sb.append("class CurrencyResponse {\n");
     
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
+    sb.append("    change: ").append(toIndentedString(change)).append("\n");
     sb.append("}");
     return sb.toString();
   }
