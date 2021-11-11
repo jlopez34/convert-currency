@@ -1,0 +1,159 @@
+swagger: "2.0"
+info:
+  description: "This is a exchange API REST definition server."
+  version: "1.0.0"
+  title: "Swagger Exchange"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "jayjango@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "exchange.swagger.io"
+basePath: "/v2"
+tags:
+- name: "exchange"
+  description: "Services to make conversion of the different currencies and saving successfully transactions finished."
+  externalDocs:
+    description: "Find out more"
+    url: "https://exchangeratesapi.io/"
+schemes:
+- "https"
+- "http"
+paths:
+  /convert:
+    post:
+      tags:
+      - "exchange"
+      summary: "Return currency converted required by user specific"
+      operationId: "convertCurrency"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "TransmissionRequest data necessary to find location and message of the spaceships lost"
+        required: true
+        schema:
+          $ref: "#/definitions/ExchangeRequest"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ExchangeResponse"
+        "401":
+          description: "UnauthorizedError"
+        "405":
+          description: "Invalid input"
+      security:
+      - exchange_auth:
+        - "write:exchange"
+        - "read:exchange"
+  /transactions/{user_id}/:
+    get:
+      tags:
+      - "exchange"
+      summary: "Search all transactions made by user ID"
+      description: ""
+      operationId: "obteinTransaction"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "user_id"
+        in: "path"
+        description: "user id who make transactions previusly"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: array
+            items:
+             $ref: "#/definitions/ExchangeResponse"
+        "401":
+          description: "UnauthorizedError"
+        "405":
+          description: "Invalid input"
+      security:
+      - exchange_auth:
+        - "write:exchange"
+        - "read:exchange"
+securityDefinitions:
+  exchange_auth:
+    type: "oauth2"
+    authorizationUrl: "http://rescue.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:exchange: "modify rescue information"
+      read:exchange: "read rescue information"
+definitions:
+  ExchangeRequest:
+    type: "object"
+    properties:
+      change:
+        $ref: "#/definitions/CurrencyRequest"
+      userID:
+        type: "string"
+        example: "12312312"
+  CurrencyRequest:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+        example: "USD"
+      value:
+        type: "number"
+        format: "float"
+        example: 100.0
+      to:
+        type: "string"
+        example: "BRL"
+  ExchangeResponse:
+    type: "object"
+    properties:
+      userID:
+        type: "string"
+        example: "12312312"
+      currency:
+        $ref: "#/definitions/CurrencyResponse"
+      transaction:
+        $ref: "#/definitions/Transaccion"
+  CurrencyResponse:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+        example: "USD"
+      value:
+        type: "number"
+        format: "float"
+        example: 100.0
+      to:
+        type: "string"
+        example: "BRL"
+      change:
+        type: "number"
+        format: "float"
+        example: 100.0
+  Transaccion:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        example: "1231432423"
+      rate:
+        type: "number"
+        format: "float"
+        example: 100.0
+      dateTime:
+        type: "string"
+        format: "date-time"
+        example: 100.0
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

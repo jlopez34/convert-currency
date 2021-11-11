@@ -9,4 +9,7 @@ public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String userId){
         super("Transaction by " + userId + " it's not was found");
     }
+
+    public ResourceNotFoundException() {
+    }
 }

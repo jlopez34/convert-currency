@@ -4,7 +4,7 @@ import com.jayatech.challenge.exchange.domain.I18Constants;
 import com.jayatech.challenge.exchange.domain.dto.Currency;
 import com.jayatech.challenge.exchange.domain.dto.ExchangeRequest;
 import com.jayatech.challenge.exchange.domain.dto.ExchangeResponse;
-import com.jayatech.challenge.exchange.domain.dto.Transaccion;
+import com.jayatech.challenge.exchange.domain.dto.Transaction;
 import com.jayatech.challenge.exchange.domain.model.Exchange;
 import com.jayatech.challenge.exchange.exception.ExchangeException;
 import com.jayatech.challenge.exchange.exception.NoSuchElementFoundException;
@@ -37,16 +37,14 @@ public class InMemoryExchangeService implements ExchangeService {
 
     @Override
     public ExchangeResponse makeConversion(ExchangeRequest exchangeRequest) {
-        ExchangeResponse exchangeResponse = null;
+        ExchangeResponse exchangeResponse;
         try {
             Charge charge = obtainRate(exchangeRequest.getChange().getFrom(), exchangeRequest.getChange().getTo());
             exchange(exchangeRequest.getChange(), charge);
-            Transaccion transaccion = loadConversion(exchangeRequest, charge);
+            Transaction transaction = loadConversion(exchangeRequest, charge);
 
-            exchangeResponse = new ExchangeResponse();
-            exchangeResponse.setCurrency(exchangeRequest.getChange());
-            exchangeResponse.setUserID(exchangeRequest.getUserID());
-            exchangeResponse.setTransaction(transaccion);
+            exchangeResponse = new ExchangeResponse(exchangeRequest.getUserID(),
+                    exchangeRequest.getChange(), transaction);
 
         } catch (ExchangeException exception) {
             LOGGER.error(exception);
@@ -56,13 +54,8 @@ public class InMemoryExchangeService implements ExchangeService {
         return exchangeResponse;
     }
 
-    /**
-     * @param exchangeRequest
-     * @param rate
-     * @return
-     */
-    private Transaccion loadConversion(ExchangeRequest exchangeRequest, Charge rate) {
-        Transaccion transaccion = new Transaccion();
+    private Transaction loadConversion(ExchangeRequest exchangeRequest, Charge rate) {
+        Transaction transaction = new Transaction();
         try {
             Exchange exchange = new Exchange();
             exchange.setCurrencyFrom(exchangeRequest.getChange().getFrom());
@@ -76,22 +69,18 @@ public class InMemoryExchangeService implements ExchangeService {
 
             exchange = repository.save(exchange);
             LOGGER.info(exchange);
-            transaccion.setDateTime(exchange.getDateTime());
-            transaccion.setId(exchange.getId().toString());
-            transaccion.setRate(rate.getRateFrom());
-            LOGGER.info(transaccion);
+            transaction.setDateTime(exchange.getDateTime());
+            transaction.setId(exchange.getId().toString());
+            transaction.setRate(rate.getRateFrom());
+            LOGGER.info(transaction);
         } catch (ExchangeException exception) {
             LOGGER.error(exception);
             throw new ExchangeException(getLocalMessage(I18Constants.NO_TRANSACTION_FOUND.getKey(), exception.getMessage()));
         }
 
-        return transaccion;
+        return transaction;
     }
 
-    /**
-     * @param change
-     * @param rate
-     */
     private void exchange(Currency change, Charge rate) {
         try {
             double changeFrom = change.getValue() / rate.getRateFrom();
@@ -104,11 +93,6 @@ public class InMemoryExchangeService implements ExchangeService {
         }
     }
 
-    /**
-     * @param from
-     * @param to
-     * @return
-     */
     private Charge obtainRate(String from, String to) {
         Charge charge = new Charge();
         HashMap<String, Double> hashMapRates;
@@ -126,10 +110,6 @@ public class InMemoryExchangeService implements ExchangeService {
         return charge;
     }
 
-    /**
-     * @param userId
-     * @return
-     */
     public List<ExchangeResponse> findTransactionByUserId(String userId) {
         List<ExchangeResponse> exchangeResponses = new ArrayList<>();
         List<Exchange> exchanges = repository.findByUserId(userId)
@@ -139,22 +119,19 @@ public class InMemoryExchangeService implements ExchangeService {
 
         for (Exchange exchange :
                 exchanges) {
-            ExchangeResponse exchangeResponse = new ExchangeResponse();
-            exchangeResponse.setUserID(exchange.getUserId());
 
             Currency currency = new Currency();
             currency.setChange(exchange.getValueTo());
             currency.setValue(exchange.getValueFrom());
             currency.setFrom(exchange.getCurrencyFrom());
             currency.setTo(exchange.getCurrencyTo());
-            exchangeResponse.setCurrency(currency);
 
-            Transaccion transaccion = new Transaccion();
-            transaccion.setRate(exchange.getRate());
-            transaccion.setId(exchange.getId().toString());
-            transaccion.setDateTime(exchange.getDateTime());
-            exchangeResponse.setTransaction(transaccion);
+            Transaction transaction = new Transaction();
+            transaction.setRate(exchange.getRate());
+            transaction.setId(exchange.getId().toString());
+            transaction.setDateTime(exchange.getDateTime());
 
+            ExchangeResponse exchangeResponse = new ExchangeResponse(exchange.getUserId(),currency, transaction);
             exchangeResponses.add(exchangeResponse);
         }
 
