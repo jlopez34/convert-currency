@@ -1,8 +1,7 @@
-package com.jayatech.challenge.exchange.dto;
+package com.jayatech.challenge.exchange.domain.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -16,7 +15,7 @@ public class Transaccion {
   private String id = null;
 
   @SerializedName("rate")
-  private Float rate = null;
+  private Double rate = null;
 
   @SerializedName("dateTime")
   private LocalDateTime dateTime = null;
@@ -39,7 +38,7 @@ public class Transaccion {
     this.id = id;
   }
 
-  public Transaccion rate(Float rate) {
+  public Transaccion rate(Double rate) {
     this.rate = rate;
     return this;
   }
@@ -49,11 +48,11 @@ public class Transaccion {
    * @return rate
   **/
   @ApiModelProperty(example = "100.0", value = "")
-  public Float getRate() {
+  public Double getRate() {
     return rate;
   }
 
-  public void setRate(Float rate) {
+  public void setRate(Double rate) {
     this.rate = rate;
   }
 

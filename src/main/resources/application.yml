@@ -1,4 +1,39 @@
+server:
+  port: 8090
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true
+reflectoring:
+  trace: true
+
+spring:
+  application:
+    name: convert-currency
+  datasource:
+    url: jdbc:h2:mem:exchangedb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    hikari:
+      connection-timeout: 6000
+      initialization-fail-timeout: 0
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        enable_lazy_load_no_trans: true
+        ddl-auto: none
+  messages:
+    basename: lang/messages
+
+logging:
+  level:
+    root: INFO
+
 service:
   rates:
     API_KEY: 386a3dd0e3505ecb24a9225dfb95ae8b
-    endpoint: https://api.exchangeratesapi.io/v1/latest?access_key=${service.rates.API_KEY}
+    endpoint: http://api.exchangeratesapi.io/v1/latest?access_key=${service.rates.API_KEY}

@@ -16,4 +16,5 @@ public class ConfigurationProperties {
     public void setRateEndPoint(String rateEndPoint) {
         this.rateEndPoint = rateEndPoint;
     }
+
 }

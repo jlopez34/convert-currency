@@ -1,20 +1,18 @@
-package com.jayatech.challenge.exchange.model;
+package com.jayatech.challenge.exchange.domain.model;
 
 import com.opengamma.strata.collect.ArgChecker;
 import org.springframework.beans.BeanUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "tbl_exchanges")
 public class Exchange implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
     @Column
@@ -24,16 +22,19 @@ public class Exchange implements Serializable {
     private String currencyFrom;
 
     @Column
-    private float valueFrom;
+    private double valueFrom;
 
     @Column
     private String currencyTo;
 
     @Column
-    private float valueTo;
+    private double valueTo;
 
     @Column
-    private float rate;
+    private double rate;
+
+    @Column
+    private String base;
 
     @Column
     private LocalDateTime dateTime;
@@ -62,11 +63,11 @@ public class Exchange implements Serializable {
         this.currencyFrom = currencyFrom;
     }
 
-    public float getValueFrom() {
+    public double getValueFrom() {
         return valueFrom;
     }
 
-    public void setValueFrom(float valueFrom) {
+    public void setValueFrom(double valueFrom) {
         this.valueFrom = valueFrom;
     }
 
@@ -78,19 +79,27 @@ public class Exchange implements Serializable {
         this.currencyTo = currencyTo;
     }
 
-    public float getValueTo() {
+    public double getValueTo() {
         return valueTo;
     }
 
-    public void setValueTo(float valueTo) {
+    public void setValueTo(double valueTo) {
         this.valueTo = valueTo;
     }
 
-    public float getRate() {
+    public String getBase() {
+        return base;
+    }
+
+    public void setBase(String base) {
+        this.base = base;
+    }
+
+    public double getRate() {
         return rate;
     }
 
-    public void setRate(float rate) {
+    public void setRate(double rate) {
         this.rate = rate;
     }
 

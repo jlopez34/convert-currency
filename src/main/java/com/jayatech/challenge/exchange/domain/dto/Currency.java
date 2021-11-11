@@ -1,4 +1,4 @@
-package com.jayatech.challenge.exchange.dto;
+package com.jayatech.challenge.exchange.domain.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
@@ -14,13 +14,13 @@ public class Currency {
   private String from = null;
 
   @SerializedName("value")
-  private Float value = null;
+  private Double value = null;
 
   @SerializedName("to")
   private String to = null;
 
   @SerializedName("change")
-  private Float change = null;
+  private Double change = null;
 
   public Currency from(String from) {
     this.from = from;
@@ -40,7 +40,7 @@ public class Currency {
     this.from = from;
   }
 
-  public Currency value(Float value) {
+  public Currency value(Double value) {
     this.value = value;
     return this;
   }
@@ -50,11 +50,11 @@ public class Currency {
    * @return value
   **/
   @ApiModelProperty(example = "100.0", value = "")
-  public Float getValue() {
+  public Double getValue() {
     return value;
   }
 
-  public void setValue(Float value) {
+  public void setValue(Double value) {
     this.value = value;
   }
 
@@ -76,7 +76,7 @@ public class Currency {
     this.to = to;
   }
 
-  public Currency change(Float change) {
+  public Currency change(Double change) {
     this.change = change;
     return this;
   }
@@ -86,11 +86,11 @@ public class Currency {
    * @return change
   **/
   @ApiModelProperty(example = "100.0", value = "")
-  public Float getChange() {
+  public Double getChange() {
     return change;
   }
 
-  public void setChange(Float change) {
+  public void setChange(Double change) {
     this.change = change;
   }
 

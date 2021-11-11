@@ -1,4 +1,4 @@
-package com.jayatech.challenge.exchange.dto;
+package com.jayatech.challenge.exchange.domain.dto;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
