@@ -21,7 +21,7 @@ We take an opinionated view of the Spring platform and third-party libraries so 
 | POST  | http://localhost:8090/exchange/convert  | Return exchange money|
 | GET  | http://localhost:8090/exchange/transactions/{userId}  | Return list of transaction by userId|
 
-* Swagger Documentation : [https://github.com/jlopez34/convert-currency/blob/develop/env/exchange-swagger.yaml][https://github.com/jlopez34/convert-currency/blob/develop/env/exchange-swagger.yaml]
+* Swagger Documentation : [https://github.com/jlopez34/convert-currency/blob/master/env/exchange-swagger.yaml][https://github.com/jlopez34/convert-currency/blob/master/env/exchange-swagger.yaml]
 
 ### Features
 
@@ -83,7 +83,7 @@ Solution must use
 
 1. You should to make clone project [https://github.com/jlopez34/convert-currency][https://github.com/jlopez34/convert-currency]
 2. Run `mvn clean install`
-3. 
+3. Download Postman Collection:[https://github.com/jlopez34/convert-currency/blob/master/env/jayatech-challenge.postman_collection.json][https://github.com/jlopez34/convert-currency/blob/master/env/jayatech-challenge.postman_collection.json]
 
 #### Test
 Run `mvn clean test` to run the unit tests. These should all pass if your solution has been implemented correctly.<br>
@@ -94,4 +94,6 @@ Run `mvn clean test` to run the unit tests. These should all pass if your soluti
 
 [http://api.exchangeratesapi.io/latest?base=EUR]: http://api.exchangeratesapi.io/latest?base=EUR
 
-[https://github.com/jlopez34/convert-currency/blob/develop/env/exchange-swagger.yaml]: https://github.com/jlopez34/convert-currency/blob/develop/env/exchange-swagger.yaml
+[https://github.com/jlopez34/convert-currency/blob/master/env/exchange-swagger.yaml]: https://github.com/jlopez34/convert-currency/blob/master/env/exchange-swagger.yaml
+
+[https://github.com/jlopez34/convert-currency/blob/master/env/jayatech-challenge.postman_collection.json]: https://github.com/jlopez34/convert-currency/blob/master/env/jayatech-challenge.postman_collection.json
