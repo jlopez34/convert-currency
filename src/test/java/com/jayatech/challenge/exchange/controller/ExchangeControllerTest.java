@@ -4,37 +4,33 @@ import com.jayatech.challenge.exchange.domain.dto.Currency;
 import com.jayatech.challenge.exchange.domain.dto.ExchangeRequest;
 import com.jayatech.challenge.exchange.domain.dto.ExchangeResponse;
 import com.jayatech.challenge.exchange.domain.dto.Transaction;
-import com.jayatech.challenge.exchange.exception.ResourceNotFoundException;
 import com.jayatech.challenge.exchange.service.ExchangeService;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.net.ServerSocket;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.when;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ExchangeController.class)
-class ExchangeControllerTest {
+public class ExchangeControllerTest {
 
     @Autowired
     protected MockMvc mockMvc;
@@ -48,7 +44,7 @@ class ExchangeControllerTest {
     }
 
     @Test
-    void shouldConvertCurrency() throws Exception {
+    public void shouldConvertCurrency() throws Exception {
         String json = "{\n\"change\": {\n\"from\": \"USD\",\n\"value\": 125,\n\"to\": \"BRL\"\n},\n\"userID\": \"jlopez\"\n}";
 
         ExchangeRequest exchangeRequest = new ExchangeRequest();
@@ -80,7 +76,7 @@ class ExchangeControllerTest {
     }
 
     @Test
-    void shouldReturnTransactionsByUserId() throws Exception {
+    public void shouldReturnTransactionsByUserId() throws Exception {
         String userId = "jlopez";
         Currency currency = new Currency();
         currency.setFrom("USD");

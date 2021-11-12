@@ -1,0 +1,180 @@
+09:15:48.355 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:48.379 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:15:48.434 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:15:48.624 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:15:48.676 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest], using SpringBootContextLoader
+09:15:48.709 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]: class path resource [com/jayatech/challenge/exchange/service/impl/InMemoryExchangeServiceTest-context.xml] does not exist
+09:15:48.730 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]: class path resource [com/jayatech/challenge/exchange/service/impl/InMemoryExchangeServiceTestContext.groovy] does not exist
+09:15:48.730 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:15:48.787 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]: InMemoryExchangeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:15:49.052 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.354 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/jaimelopez/Documents/Developer/challenge/jayatech/convert-currency/target/classes/com/jayatech/challenge/exchange/ExchangeApplication.class]
+09:15:49.355 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jayatech.challenge.exchange.ExchangeApplication for test class com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest
+09:15:49.794 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]: using defaults.
+09:15:49.795 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:15:49.885 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d4f67e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1282f784, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@41167ded, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@13e1e816, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@36238b12, org.springframework.test.context.support.DirtiesContextTestExecutionListener@33187485, org.springframework.test.context.transaction.TransactionalTestExecutionListener@41938e1e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d2e6f62, org.springframework.test.context.event.EventPublishingTestExecutionListener@77ff14ce, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@733fae8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5a8d676e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74764622, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7ba06506, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@63dc3420, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@525b8922]
+09:15:49.889 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.891 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.892 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.892 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.892 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.892 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.894 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.895 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.896 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.896 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.919 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2830315f testClass = InMemoryExchangeServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@da22aa testClass = InMemoryExchangeServiceTest, locations = '{}', classes = '{class com.jayatech.challenge.exchange.ExchangeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1687eb01, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1dc3502b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3240b2a4, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@26350ea2, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3722c145, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@41ffaeb8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+09:15:49.926 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:49.926 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest]
+09:15:50.022 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.2)
+
+2021-11-12 09:15:51.579  INFO 88712 --- [           main] c.j.c.e.s.i.InMemoryExchangeServiceTest  : Starting InMemoryExchangeServiceTest using Java 11.0.10 on Jaimes-MacBook-Pro.local with PID 88712 (started by jaimelopez in /Users/jaimelopez/Documents/Developer/challenge/jayatech/convert-currency)
+2021-11-12 09:15:51.584  INFO 88712 --- [           main] c.j.c.e.s.i.InMemoryExchangeServiceTest  : No active profile set, falling back to default profiles: default
+2021-11-12 09:15:54.532  INFO 88712 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-12 09:15:54.747  INFO 88712 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 1 JPA repository interfaces.
+2021-11-12 09:15:56.471  INFO 88712 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-12 09:15:57.615  INFO 88712 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-12 09:15:57.873  INFO 88712 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-12 09:15:58.086  INFO 88712 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-11-12 09:15:58.636  INFO 88712 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-12 09:15:59.086  INFO 88712 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-12 09:15:59.824  INFO 88712 --- [           main] o.hibernate.id.enhanced.TableGenerator   : HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+Hibernate: 
+    
+    drop table if exists hibernate_sequences CASCADE 
+Hibernate: 
+    
+    drop table if exists tbl_exchanges CASCADE 
+Hibernate: 
+    
+    create table hibernate_sequences (
+       sequence_name varchar(255) not null,
+        next_val bigint,
+        primary key (sequence_name)
+    )
+Hibernate: 
+    
+    insert into hibernate_sequences(sequence_name, next_val) values ('default',0)
+Hibernate: 
+    
+    create table tbl_exchanges (
+       id bigint not null,
+        base varchar(255),
+        currency_from varchar(255),
+        currency_to varchar(255),
+        date_time timestamp,
+        rate double,
+        user_id varchar(255),
+        value_from double,
+        value_to double,
+        primary key (id)
+    )
+2021-11-12 09:16:00.846  INFO 88712 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-12 09:16:00.866  INFO 88712 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-12 09:16:01.991  WARN 88712 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-12 09:16:02.341  INFO 88712 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-12 09:16:02.947  INFO 88712 --- [           main] c.j.c.e.s.i.InMemoryExchangeServiceTest  : Started InMemoryExchangeServiceTest in 12.894 seconds (JVM running for 16.267)
+log4j:WARN No appenders could be found for logger (com.jayatech.challenge.exchange.gateway.exchangerates.impl.ExchangeRatesImpl).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+java.lang.NumberFormatException: For input string: "class com.jayatech.challenge.exchange.gateway.exchangerates.dto.Rates"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:543)
+	at com.jayatech.challenge.exchange.wrapper.ExchangeWrapper.wrapServiceToMap(ExchangeWrapper.java:19)
+	at com.jayatech.challenge.exchange.service.impl.InMemoryExchangeService.obtainRate(InMemoryExchangeService.java:102)
+	at com.jayatech.challenge.exchange.service.impl.InMemoryExchangeService.makeConversion(InMemoryExchangeService.java:42)
+	at com.jayatech.challenge.exchange.service.impl.InMemoryExchangeServiceTest.shouldReturnConversion(InMemoryExchangeServiceTest.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Hibernate: 
+    select
+        tbl.next_val 
+    from
+        hibernate_sequences tbl 
+    where
+        tbl.sequence_name=? for update
+            
+Hibernate: 
+    update
+        hibernate_sequences 
+    set
+        next_val=?  
+    where
+        next_val=? 
+        and sequence_name=?
+Hibernate: 
+    insert 
+    into
+        tbl_exchanges
+        (base, currency_from, currency_to, date_time, rate, user_id, value_from, value_to, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        exchange0_.id as id1_0_,
+        exchange0_.base as base2_0_,
+        exchange0_.currency_from as currency3_0_,
+        exchange0_.currency_to as currency4_0_,
+        exchange0_.date_time as date_tim5_0_,
+        exchange0_.rate as rate6_0_,
+        exchange0_.user_id as user_id7_0_,
+        exchange0_.value_from as value_fr8_0_,
+        exchange0_.value_to as value_to9_0_ 
+    from
+        tbl_exchanges exchange0_ 
+    where
+        exchange0_.user_id=?
+2021-11-12 09:16:04.096  INFO 88712 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-12 09:16:04.097  INFO 88712 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-12 09:16:04.098  INFO 88712 --- [extShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: 
+    
+    drop table if exists hibernate_sequences CASCADE 
+2021-11-12 09:16:04.402  WARN 88712 --- [extShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-12 09:16:04.402 ERROR 88712 --- [extShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-12 09:16:04.403  WARN 88712 --- [extShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-12 09:16:04.403 ERROR 88712 --- [extShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-12 09:16:04.404  WARN 88712 --- [extShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2021-11-12 09:16:04.404  INFO 88712 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-12 09:16:04.408  INFO 88712 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

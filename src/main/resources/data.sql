@@ -12,4 +12,4 @@ CREATE TABLE TBL_EXCHANGES (
   value_to NUMBER NOT NULL
 );
 
-INSERT INTO TBL_EXCHANGES (currency_from, currency_to, date_time, base, rate, user_id, value_from, value_to) VALUES('BRL','EUR', CURRENT_TIMESTAMP(9),'EUR',2,'JLOPEZ',45,4500);
+-- INSERT INTO TBL_EXCHANGES (currency_from, currency_to, date_time, base, rate, user_id, value_from, value_to) VALUES('BRL','EUR', CURRENT_TIMESTAMP(9),'EUR',2,'JLOPEZ',45,4500);
